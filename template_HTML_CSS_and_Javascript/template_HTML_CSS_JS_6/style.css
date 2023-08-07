@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root {
+    --primary-color: #82c044;
+    --white-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wrapper {
+    background: var(--white-color);
+    width: 400px;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.content {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content .tags {
+    background: var(--primary-color);
+    color: var(--white-color);
+    line-height: 28px;
+    border-radius: 3px;
+    margin: 3px;
+    padding: 5px;
+    display: flex;
+    cursor: pointer;
+}
+
+.content .tags i {
+    font-size: 20px;
+    margin: auto auto auto 3px;
+    cursor: pointer;
+}
+
+.content input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin: 10px 3px;
+    flex: 1;
+}
+
+.remove-all {
+    background: var(--primary-color);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: var(--white-color);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.content .tags:hover, .remove-all:hover {
+    opacity: 0.8;
+}

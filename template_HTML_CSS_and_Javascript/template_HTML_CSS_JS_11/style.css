@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    font-family: sans-serif;
+    background: linear-gradient(0, #3a013a, #ff3a5b);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.preview {
+    width: 600px;
+    height: 400px;
+    border: 2px dashed #fff;
+    display: block;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+
+.preview i {
+    font-size: 32px;
+}
+
+.preview span {
+    margin-top: 10px;
+}
+
+.preview img, .preview video, .preview iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* object-fit: cover; */
+}

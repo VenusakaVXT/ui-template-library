@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./style.css">
+    <title>Drawing App</title>
+</head>
+<body>
+    <header class="tools">
+        <input id="color" type="color" value="#02edc6">
+
+        <button id="eraser">
+            <i class="fas fa-eraser"></i>
+        </button>
+        
+        <button id="decrease">-</button>
+        
+        <button id="size"></button>
+        
+        <button id="increase">+</button>
+        
+        <a id="save" download="filename.png">
+            <i class="fas fa-save"></i>
+        </a>
+
+        <button id="clear">X</button>
+    </header>
+
+    <canvas id="canvas" width="1200" height="600"></canvas>
+
+    <script src="./script.js"></script>
+</body>
+</html>

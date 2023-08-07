@@ -1,0 +1,121 @@
+:root {
+    --background-pale-red: #f88282;
+    --white-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, 
+    #4158d0, #c850c0, #ffcc70);
+}
+
+.open-modal-btn {
+    padding: 20px 30px;
+    border: none;
+    border-radius: 6px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+.open-modal-btn:hover {
+    opacity: 0.9;
+}
+
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__inner {
+    position: relative;
+    width: 400px;
+    top: 40%;
+    margin: auto;
+    background: var(--white-color);
+    border-radius: 5px;
+    overflow: hidden;
+    animation: showModal 0.3s linear;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white-color);
+    background: var(--background-pale-red);
+}
+
+.modal__header i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.modal__header i:hover {
+    opacity: 0.7;
+}
+
+.modal__body {
+    padding: 20px 20px;
+    font-size: 1.4rem;
+}
+
+.modal__body h2 {
+    color: var(--background-pale-red);
+    margin-bottom: 10px;
+}
+
+.modal__footer {
+    padding: 0 20px 10px;
+    text-align: right;
+}
+
+.modal__footer button {
+    font-size: 1.4rem;
+    padding: 10px 15px;
+    border: none;
+    background: var(--background-pale-red);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.modal__footer button:hover {
+    opacity: 0.9;
+}
+
+.modal--hide {
+    display: none;
+}
+
+@keyframes showModal {
+    from {
+        top: -200px;
+        opacity: 0;
+    }
+    to {
+        top: 40%;
+        opacity: 1;
+    }
+}

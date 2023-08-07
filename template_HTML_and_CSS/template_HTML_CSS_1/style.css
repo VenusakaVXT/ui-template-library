@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind', sans-serif;
+}
+
+body {
+    background: #383838;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book {
+    background: #fff;
+    width: 800px;
+    height: 500px;
+    border-radius: 20px;
+    perspective: 600px;
+    position: relative;
+}
+
+.book::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 50%;
+    background: #707070;
+    border-radius: 20px 0 0 20px;
+    transform-origin: center right;
+    transform: rotateY(180deg);
+    transition: 0.7s ease all;
+}
+
+.book:hover::before {
+    transform: rotateY(0);
+}
+
+.book .page {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    padding: 225px 0;
+}
+
+.book .page1 {
+    background: #ee5f2a;
+    border-radius: 20px 0 0 20px;
+    left: 0;
+}
+
+.book .page.page2 {
+    background: #30a5da;
+    border-radius: 0 20px 20px 0;
+    right: 0;
+}
+
+/* .book .page.page3 {
+    background: yellow;
+    border-radius: 0 20px 20px 0;
+    right: 1;
+}
+
+.book .page.page4 {
+    background: grey;
+}
+
+.book .page.page5 {
+    background: rgb(45, 248, 45);
+}
+
+.book .page.page6 {
+    background: #30a5da;
+} */

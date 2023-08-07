@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#ff0000, #ffff00);
+}
+
+.box {
+    width: 180px;
+    height: 180px;
+    border: 2px solid #000;
+    background: #fff;
+    margin: 10px;
+}
+
+.target {
+    width: 100%;
+    height: 100%;
+    background: url(./meme_frog.png) center/cover;
+}
+
+.dragging {
+    border: 2px solid #ccc;
+}

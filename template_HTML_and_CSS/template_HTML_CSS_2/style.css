@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: seagreen;
+}
+
+body {
+    background: #000;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.on-lower {
+    text-align: center;
+}
+
+.north {
+    margin-top: 30vh;
+}
+
+.compass {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 25px 25px 75px
+    rgba(0, 0, 0, 0.55);
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.compass::before {
+    content: "";
+    position: absolute;
+    inset: 20px;
+    background: transparent;
+    border: 1px dashed #444;
+    border-radius: 50%;
+    box-shadow: inset -5px -5px 25px
+    rgba(0, 0, 0, 0.25),
+    inset 5px 5px 35px
+    rgba(0, 0, 0, 0.25);
+}
+
+.compass::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px dashed #444;
+    box-shadow: inset -5px -5px 25px
+    rgba(0, 0, 0, 0.25),
+    inset 5px 5px 35px
+    rgba(0, 0, 0, 0.25);
+}
+
+.compass span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: transparent;
+    transform-origin: top left;
+    animation: radar78 2s linear infinite;
+    border-top: 1px dashed #fff;
+}
+
+.compass span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: seagreen;
+    transform-origin: top left;
+    transform: rotate(-55deg);
+    filter: blur(30px) drop-shadow(20px 20px 20px seagreen);
+}
+
+@keyframes radar78 {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

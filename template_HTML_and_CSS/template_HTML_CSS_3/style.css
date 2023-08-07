@@ -1,0 +1,100 @@
+:root
+{
+    counter-reset: checked-sum, unchecked-sum;
+}
+
+input[type="checkbox"]
+{
+    counter-increment: unchecked-sum;
+}
+
+input[type="checkbox"]:checked
+{
+    counter-increment: checked-sum;
+}
+
+.totalUnChecked::after 
+{
+    content: counter(unchecked-sum);
+}
+
+.totalChecked::after
+{
+    content: counter(checked-sum);
+}
+
+html
+{
+    margin: 0;
+    background: url(./background-notebook.jpg) 70%;
+}
+
+.topic
+{
+    text-align: center;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-row-gap: 6px;
+    justify-content: center;
+    border: 5px solid;
+    border-image: linear-gradient(325deg, navy, gold) 1;
+    width: 250px;
+    margin: auto;
+    padding: 40px 10px;
+}
+
+.total
+{
+    grid-row: 1;
+    grid-column: 1/3;
+    margin: 5px 0 10px 0;
+    width: 100%;
+}
+
+body
+{
+    font-family: "bellefair";
+    color: navy;
+    font-size: 13pt;
+}
+
+input[type="checkbox"]::after
+{
+    display: block;
+    content: "";
+    width: 13px;
+    height: 13px;
+    background: #ccc;
+    color: navy;
+    border: 1px solid navy;
+    text-align: center;
+}
+
+input[type="checkbox"]:checked::after
+{
+    content: "✓";
+    background: gold;
+}
+
+.total span
+{
+    background: gold;
+    display: inline-block;
+    margin-bottom: 3px;
+    padding: 3px;
+}
+
+/* .transmitted button
+{
+    display: grid;
+    background: linear-gradient(0, navy, gold);
+    color: navy;
+    padding: 10px;
+    border: none;
+    margin-top: 20px auto;
+    justify-content: center;
+} */

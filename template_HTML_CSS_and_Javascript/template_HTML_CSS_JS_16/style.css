@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.tools {
+    background: #6d0237;
+    display: flex;
+}
+
+.tools > * {
+    width: 40px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    margin: 8px;
+    font-size: 20px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#save {
+    margin-left: auto;
+    text-decoration: none;
+    text-align: center;
+    line-height: calc(40px - 10px);
+}
+
+#canvas {
+    border: 1px solid #000;
+    border-top: none;
+    display: block;
+    margin: auto;
+}

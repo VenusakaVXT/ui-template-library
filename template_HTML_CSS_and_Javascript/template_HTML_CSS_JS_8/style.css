@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, 
+    rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), 
+    url(./img/summer.jpg) no-repeat center/cover;
+}
+
+#weather {
+    width: 350px;
+    border-radius: 10px;
+    padding: 30px 20px;
+    background: url(./img/summer.jpg) no-repeat center/cover;
+}
+
+.spring {
+    background: linear-gradient(to top, 
+    rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), 
+    url(./img/spring.jpg) no-repeat center/cover;
+}
+
+.spring #weather {
+    background: url(./img/spring.jpg) no-repeat center/cover;
+}
+
+.summer {
+    background: linear-gradient(to top, 
+    rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), 
+    url(./img/summer.jpg) no-repeat center/cover;
+}
+
+.summer #weather {
+    background: url(./img/summer.jpg) no-repeat center/cover;
+}
+
+.autumn {
+    background: linear-gradient(to top, 
+    rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), 
+    url(./img/autumn.jpg) no-repeat center/cover;
+}
+
+.autumn #weather {
+    background: url(./img/autumn.jpg) no-repeat center/cover;
+}
+
+.winter {
+    background: linear-gradient(to top, 
+    rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), 
+    url(./img/winter.jpg) no-repeat center/cover;
+}
+
+.winter #weather {
+    background: url(./img/winter.jpg) no-repeat center/cover;
+}
+
+#search {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 0 15px 0 15px;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+    font-size: 16px;
+}
+
+#search:focus {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px 0 15px 0;
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+    margin: 40px 0;
+}
+
+.capital {
+    text-shadow: 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.time {
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.temperature {
+    font-size: 65px;
+    text-shadow: 4px 4px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin: 0 50px;
+    padding: 20px;
+}
+
+.short-desc {
+    margin: 40px 0;
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.more-desc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.display-item p {
+    padding: 8px 0;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="" method="POST" class="form" id="register-form">
+            <h3 class="heading">Registration Form</h3>
+            <p class="desc">Fill out the information below to register for an account.</p>
+        
+            <div class="spacer"></div>
+        
+            <div class="form-group">
+              <label for="fullname" class="form-label">Full Name</label>
+              <input id="fullname" name="fullname" rules="required" type="text" placeholder="Ex: Venus aka VXT" class="form-control">
+              <span class="form-message"></span>
+            </div>
+        
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" name="email" rules="required|email" type="text" placeholder="Ex: email@domain.com" class="form-control">
+              <span class="form-message"></span>
+            </div>
+        
+            <div class="form-group">
+              <label for="password" class="form-label">Password</label>
+              <input id="password" name="password" rules="required|min:6" type="password" placeholder="Enter password" class="form-control">
+              <span class="form-message"></span>
+            </div>
+        
+            <div class="form-group">
+              <label for="password_confirmation" class="form-label">Re-enter password</label>
+              <input id="password_confirmation" name="password_confirmation" rules="required|equalpassword" placeholder="Re-enter password" type="password" class="form-control">
+              <span class="form-message"></span>
+            </div>
+        
+            <button class="form-submit">Register</button>
+          </form>
+    </div>
+
+    <script src="./script.js"></script>
+    <script>
+      Validator('#register-form');
+    </script>
+</body>
+</html>
