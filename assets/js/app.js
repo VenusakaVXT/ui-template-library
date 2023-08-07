@@ -60,7 +60,7 @@ const template_HTML_CSS_Javascript = [
     },
     {
         hrefValue: './template_HTML_CSS_and_Javascript/template_HTML_CSS_JS_5/index.html',
-        imageValue: './assets/image/library_HTML_CSS_JS_img/5.png',
+        imageValue: './assets/image/library_HTML_CSS_JS_img/5.PNG',
         backgroundColorValue: 'var(--background-whitesmoke)',
         nameValue: 'Detect Press Key'
     },
