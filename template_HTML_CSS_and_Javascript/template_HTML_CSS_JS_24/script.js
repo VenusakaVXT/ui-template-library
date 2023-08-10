@@ -1,4 +1,15 @@
 const wrapper = document.querySelector('.wrapper')
+const BOX_LENGTH = 25;
+
+// Render
+for (let i = 1; i <= BOX_LENGTH; i++) {
+	let box = document.createElement('div')
+	box.classList.add('box')
+	box.textContent = i
+	wrapper.appendChild(box)
+}
+
+// Events
 let isMouseDown = false
 let startX, scrollLeft
 
