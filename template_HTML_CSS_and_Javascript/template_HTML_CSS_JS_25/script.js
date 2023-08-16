@@ -10,40 +10,40 @@ const volumeIcon = player.querySelectorAll('.player__volume i')
 const time = player.querySelector('.player__time')
 
 function togglePlay() {
-	if (video.paused) {
-		video.play()
-		toggle.innerHTML = "<i class='bx bx-pause'></i>"
-	} else {
-		video.pause()
-		toggle.innerHTML = "<i class='bx bx-play'></i>"
-	}
+    if (video.paused) {
+        video.play()
+        toggle.innerHTML = "<i class='bx bx-pause'></i>"
+    } else {
+        video.pause()
+        toggle.innerHTML = "<i class='bx bx-play'></i>"
+    }
 }
 
 // Video time format
 function formatTime(time) {
-	let minutes = Math.floor(time / 60)
-	let seconds = Math.floor(time - minutes * 60)
-	let minuteValue, secondValue
+    let minutes = Math.floor(time / 60)
+    let seconds = Math.floor(time - minutes * 60)
+    let minuteValue, secondValue
 
-	minuteValue = minutes < 10 ? '0' + minutes : minutes
-	secondValue = seconds < 10 ? '0' + seconds : seconds
+    minuteValue = minutes < 10 ? '0' + minutes : minutes
+    secondValue = seconds < 10 ? '0' + seconds : seconds
 
-	let mediaTime = minuteValue + ':' + secondValue
-	return mediaTime
+    let mediaTime = minuteValue + ':' + secondValue
+    return mediaTime
 }
 
 function handleProgress() {
-	const percent = (video.currentTime / video.duration) * 100
-	progressBar.style.width = `${percent}%`
+    const percent = (video.currentTime / video.duration) * 100
+    progressBar.style.width = `${percent}%`
 
-	time.innerHTML = `${formatTime(video.currentTime)}/ ${formatTime(
-		video.duration
-	)}`
+    time.innerHTML = `${formatTime(video.currentTime)}/ ${formatTime(
+        video.duration
+    )}`
 }
 
 function scrub(e) {
-	const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration
-	video.currentTime = scrubTime
+    const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration
+    video.currentTime = scrubTime
 }
 
 // Play/Pause video
@@ -55,14 +55,14 @@ video.addEventListener('timeupdate', handleProgress)
 
 // Rewind video
 skipButtons.forEach((button) =>
-	button.addEventListener('click', function () {
-		video.currentTime += +this.dataset.skip
-	})
+    button.addEventListener('click', function () {
+        video.currentTime += +this.dataset.skip
+    })
 )
 
 // Custom volume
 volumeCustom.addEventListener('change', function () {
-	video.volume = this.value
+    video.volume = this.value
 })
 
 volumeIcon.forEach((item) => {
