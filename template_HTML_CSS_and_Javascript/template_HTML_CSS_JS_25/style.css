@@ -102,14 +102,14 @@ body {
 }
 
 .player__video-end {
-	position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 100px;
     color: #fff;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
     display: none;
-	cursor: pointer;
+    cursor: pointer;
 }
 
