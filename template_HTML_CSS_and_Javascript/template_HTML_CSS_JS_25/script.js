@@ -79,3 +79,17 @@ volumeIcon.forEach((item) => {
 
 // Choose a moment in the video
 progress.addEventListener('click', scrub)
+
+// End video
+// Display the player__video-end element when the video ends
+video.addEventListener('ended', function() {
+    player.querySelector('.player__video-end').style.display = 'block';
+})
+
+// Hide the player__video-end element when the video is looped
+video.addEventListener('play', function() {
+    player.querySelector('.player__video-end').style.display = 'none';
+})
+
+player.querySelector('.player__video-end').addEventListener('click', togglePlay);
+
