@@ -63,6 +63,15 @@ skipButtons.forEach((button) =>
 // Custom volume
 volumeCustom.addEventListener('change', function () {
     video.volume = this.value
+
+    // if (video.volume === 0) {
+    //     volumeIcon[0].classList.remove('bxs-volume-full')
+    //     volumeIcon[0].classList.add('bxs-volume-mute')
+    // }
+    // else {
+    //     volumeIcon[0].classList.remove('bxs-volume-mute')
+    //     volumeIcon[0].classList.add('bxs-volume-full')
+    // }
 })
 
 volumeIcon.forEach((item) => {
@@ -83,13 +92,13 @@ progress.addEventListener('click', scrub)
 // End video
 // Display the player__video-end element when the video ends
 video.addEventListener('ended', function() {
-    player.querySelector('.player__video-end').style.display = 'block';
+    player.querySelector('.player__video-end').style.display = 'block'
 })
 
 // Hide the player__video-end element when the video is looped
 video.addEventListener('play', function() {
-    player.querySelector('.player__video-end').style.display = 'none';
+    player.querySelector('.player__video-end').style.display = 'none'
 })
 
-player.querySelector('.player__video-end').addEventListener('click', togglePlay);
+player.querySelector('.player__video-end').addEventListener('click', togglePlay)
 
