@@ -258,7 +258,6 @@ body.dark {
 /* Responsive */
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
-
     .header__introduce {
         font-size: 1.9rem;
         line-height: 1.3;
@@ -268,12 +267,10 @@ body.dark {
         width: 30%;
         margin: 11px;
     }
-
 }
 
 /* Mobile */
 @media (max-width: 739px) {
-
     .header__title {
         width: 100%;
         line-height: 1.3;
@@ -283,6 +280,14 @@ body.dark {
         text-align: justify;
         line-height: 1.5;
         font-size: 1.7rem;
+    }
+
+    .header__toggle label {
+        top: -12px;
+    }
+
+    .header__link {
+        top: -18px;
     }
 
     .grid__column {
