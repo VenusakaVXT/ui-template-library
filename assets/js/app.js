@@ -1,3 +1,9 @@
+const toogleTheme = document.getElementById('toggleTheme')
+
+toogleTheme.addEventListener('change', () => {
+    document.body.classList.toggle('dark')
+})
+
 const templateWrap1 = document.querySelector('#list-first .grid__row');
 const template_HTML_CSS = [
     {
