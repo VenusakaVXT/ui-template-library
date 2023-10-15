@@ -1,10 +1,19 @@
+const body = document.body
 const toogleTheme = document.getElementById('toggleTheme')
 
+if (localStorage.getItem('bodyClass')) {
+    body.setAttribute('class', localStorage.getItem('bodyClass'))
+}
+
 toogleTheme.addEventListener('change', () => {
-    document.body.classList.toggle('dark')
+    body.classList.toggle('dark')
+
+    // Store class current in localStorage
+    localStorage.setItem('bodyClass', body.getAttribute('class'))
 })
 
-const templateWrap1 = document.querySelector('#list-first .grid__row');
+
+const templateWrap1 = document.querySelector('#list-first .grid__row')
 const template_HTML_CSS = [
     {
         hrefValue: './template_HTML_and_CSS/template_HTML_CSS_1/index.html',
@@ -36,9 +45,9 @@ const template_HTML_CSS = [
         backgroundColorValue: 'var(--background-whitesmoke)',
         nameValue: 'Button Interfaces'
     }
-];
+]
 
-const templateWrap2 = document.querySelector('#list-second .grid__row');
+const templateWrap2 = document.querySelector('#list-second .grid__row')
 const template_HTML_CSS_Javascript = [
     {
         hrefValue: './template_HTML_CSS_and_Javascript/template_HTML_CSS_JS_1/index.html',
@@ -190,31 +199,75 @@ const template_HTML_CSS_Javascript = [
         backgroundColorValue: 'var(--background-skin)',
         nameValue: 'Custom Video Player'
     },
-];
+]
 
-let templateElement;
+let templateElement
 function renderTemplate(item, store) {
     const templateContent = `
     <a class="container__template-item" href="${item.hrefValue}">
     <div class="container__template-item-img"
-        style="background-image: url(${item.imageValue});">
+        style="background-image: url(${item.imageValue})">
     </div>
     <h4 class="container__template-item-name" 
-        style="background: ${item.backgroundColorValue};">${item.nameValue}
+        style="background: ${item.backgroundColorValue}">${item.nameValue}
     </h4>
     </a>
     `
-    templateElement = document.createElement('div');
-    templateElement.classList.add('grid__column');
-    templateElement.innerHTML = templateContent;
-    store.appendChild(templateElement);
+    templateElement = document.createElement('div')
+    templateElement.classList.add('grid__column')
+    templateElement.innerHTML = templateContent
+    store.appendChild(templateElement)
 }
 
 template_HTML_CSS.forEach(templateItem => {
-    renderTemplate(templateItem, templateWrap1);
-});
+    renderTemplate(templateItem, templateWrap1)
+})
 
 template_HTML_CSS_Javascript.forEach(templateItem => {
-    renderTemplate(templateItem, templateWrap2);
-});
+    renderTemplate(templateItem, templateWrap2)
+})
 
+/*
+// Stores the state of the home page
+// Use `pushState`, `replaceState` and `popstate` APIs with AJAX
+document.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+        var href = this.getAttribute('href')
+
+        // Change URL and browser history
+        history.pushState(null, null, href)
+
+        // Reload the content of the new page
+        loadPage(href)
+    })
+})
+
+// When popstate event is fired (back from new page)
+window.addEventListener('popstate', () => {
+    // Get the current path
+    var path = location.pathname
+
+    // Reloads the content of the current page
+    loadPage(path)
+
+})
+
+// Method to load the content of the new page
+function loadPage(url) {
+    // Create an AJAX obj
+    var xhr = new XMLHttpRequest()
+
+    // Register an event to handle the event 
+    // when the AJAX object finishes downloading the new page's content
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            // Change the content of the current page with the content of the new page
+            document.querySelector('#content').innerHTML = xhr.responseText
+        }
+    }
+
+    // Download the content of the new page
+    xhr.open('GET', url, true)
+    xhr.send()
+}
+*/
