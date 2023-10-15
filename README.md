@@ -45,7 +45,7 @@ Let's take a look at 30 projects that I have done below.
 - [**Custom Video Player**](https://venusakavxt.github.io/template-library/template_HTML_CSS_and_Javascript/template_HTML_CSS_JS_25/index.html)
 
 # Note
-- The theme change section of the home page is still having problems with storage.
+- The theme change section of the home page is still having problems with storage (Partly, this is a fairly small project and I don't want to implement it in a complicated and cumbersome way).
 - In the Weather App section, I have requested the API until now, it is no longer supported by browsers, so when you download it, you can request another API, by going online to search **weather app api** or maybe refer to this https://openweathermap.org/ website.
 
 # Experiences Gained
