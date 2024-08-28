@@ -1,4 +1,8 @@
 # Template Library
+![html](https://badgen.net/badge/HTML/5?labelColor=orange&color=orange)
+![css](https://badgen.net/badge/CSS/3?labelColor=blue&color=blue)
+![js](https://badgen.net/badge/Javascript/ES6?labelColor=yellow&color=yellow)
+
 The site contains 30 sample libraries made of reusable HTML, CSS & Javascript for front end developers.
 
 In which, there are 5 libraries mainly made from CSS and 25 libraries made from Javascript.
